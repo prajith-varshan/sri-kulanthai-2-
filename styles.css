@@ -30,7 +30,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 1rem 5%;
+  padding: 0.75rem 5%;
   background: linear-gradient(90deg, #071420, #0f2a46);
   color: #fff;
   display: flex;
@@ -45,29 +45,30 @@ a {
 .logo-area {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 .site-logo {
-  width: 56px;
-  height: 56px;
+  width: 38px;
+  height: 38px;
   object-fit: contain;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.06);
-  padding: 4px;
+  padding: 3px;
   border: 1px solid rgba(212, 175, 55, 0.35);
   flex-shrink: 0;
 }
 
 .logo-area h1 {
-  font-size: 1.5rem;
-  margin-bottom: 0.2rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.15rem;
   color: #f4fbff;
 }
 
 .logo-area p {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: #a8bfd2;
+  line-height: 1.3;
 }
 
 .site-nav ul {
@@ -231,16 +232,11 @@ a {
 .service-box h3 {
   color: #D4AF37;
   margin-bottom: 0.7rem;
+  text-align: center;
 }
 
 .service-card p,
 .service-box p {
-  color: #d7e4ef;
-  text-align: center;
-}
-
-.social-box {
-  display: block;
   text-align: center;
 }
 
@@ -251,48 +247,6 @@ a {
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2);
   margin-top: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 1.5rem;
-}
-
-.social-links a {
-  color: #071420;
-  font-weight: 700;
-  padding: 0.7rem 1rem;
-  border-radius: 999px;
-  background: #D4AF37;
-  border: 1px solid #D4AF37;
-}
-
-.social-links a:hover {
-  background: #EBA442;
-  color: #071420;
-}
-
-.quote-btn {
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-  z-index: 1000;
-  background: #D4AF37;
-  color: #071420;
-  padding: 0.9rem 1.2rem;
-  border-radius: 999px;
-  font-weight: 700;
-  box-shadow: 0 10px 22px rgba(212, 175, 55, 0.28);
-  transition: 0.3s ease;
-  border: 1px solid #D4AF37;
-}
-
-.quote-btn:hover {
-  transform: translateY(-3px);
-  background: #EBA442;
 }
 
 .site-footer {
@@ -323,22 +277,39 @@ a {
 
 @media (max-width: 768px) {
   .site-header {
-    flex-direction: column;
-    text-align: center;
+    padding: 0.5rem 3.5%;
+    gap: 0.5rem;
   }
 
   .logo-area {
-    flex-direction: column;
-    text-align: center;
+    gap: 0.45rem;
+    align-items: center;
   }
 
   .site-logo {
-    width: 44px;
-    height: 44px;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+  }
+
+  .logo-area h1 {
+    font-size: 0.9rem;
+    line-height: 1.1;
+  }
+
+  .logo-area p {
+    font-size: 0.6rem;
+    line-height: 1.15;
   }
 
   .site-nav ul {
+    gap: 0.35rem;
     justify-content: center;
+  }
+
+  .site-nav a {
+    padding: 0.45rem 0.65rem;
+    font-size: 0.72rem;
   }
 
   .hero {
@@ -358,11 +329,11 @@ a {
 
   .service-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  .quote-btn {
-    right: 0.8rem;
-    bottom: 0.8rem;
-    padding: 0.85rem 1rem;
+  .service-card,
+  .service-box {
+    padding: 1.1rem;
   }
 }
