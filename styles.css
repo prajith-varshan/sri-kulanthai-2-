@@ -212,13 +212,33 @@ a {
 
 .service-card,
 .service-box {
-  background: linear-gradient(180deg, rgba(10, 24, 39, 0.92), rgba(13, 33, 53, 0.96));
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(10, 24, 39, 0.35), rgba(13, 33, 53, 0.82));
   padding: 1.6rem;
   border-radius: 20px;
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(212, 175, 55, 0.55);
   color: #e9f7ff;
   transition: 0.35s ease;
+  min-height: 180px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.service-card::before,
+.service-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+}
+
+.service-card > *,
+.service-box > * {
+  position: relative;
+  z-index: 1;
 }
 
 .service-card:hover,
@@ -230,15 +250,28 @@ a {
 
 .service-card h3,
 .service-box h3 {
-  color: #D4AF37;
+  color: #fff;
   margin-bottom: 0.7rem;
   text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
 }
 
 .service-card p,
 .service-box p {
   text-align: center;
+  color: #f2f7fb;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
 }
+
+.loan-card { background-image: url("loan.jpg"); }
+.aadhar-card { background-image: url("aadhar.jpg"); }
+.esevai-card { background-image: url("esevai.jpg"); }
+.sbi-card { background-image: url("sbi.jpg"); }
+.jobs-card { background-image: url("jobs.jpg"); }
+.ration-card { background-image: url("ration.jpg"); }
+.instagram-card { background-image: url("instagram.jpg"); }
+.facebook-card { background-image: url("facebook.jpg"); }
+.maps-card { background-image: url("maps.jpg"); }
 
 .contact-box {
   background: linear-gradient(180deg, rgba(8, 23, 37, 0.92), rgba(12, 31, 48, 0.98));
@@ -247,6 +280,10 @@ a {
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2);
   margin-top: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.social-grid {
+  margin-top: 1.5rem;
 }
 
 .site-footer {
@@ -276,23 +313,13 @@ a {
 }
 
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes zoomSlow {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.08);
-  }
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
 }
 
 @media (max-width: 768px) {
@@ -355,5 +382,13 @@ a {
   .service-card,
   .service-box {
     padding: 1.1rem;
+    min-height: 160px;
+  }
+
+  .quote-btn {
+    right: 0.75rem;
+    bottom: 0.75rem;
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
   }
 }
