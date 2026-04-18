@@ -255,6 +255,26 @@ a {
   color: #a8bfd2;
 }
 
+.quote-btn {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1000;
+  background: #D4AF37;
+  color: #071420;
+  padding: 0.9rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 10px 22px rgba(212, 175, 55, 0.28);
+  transition: 0.3s ease;
+  border: 1px solid #D4AF37;
+}
+
+.quote-btn:hover {
+  transform: translateY(-3px);
+  background: #EBA442;
+}
+
 @keyframes fadeUp {
   from {
     opacity: 0;
